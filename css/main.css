@@ -1679,7 +1679,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cb707f;
+  background: #ff4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2908,8 +2908,8 @@ table td:nth-child(1) {
 }
 #ds-reset .ds-avatar img,
 #ds-thread #ds-reset ul.ds-children .ds-avatar img {
-  width: 30px !important;
-  height: 30px !important;
+  width: 48px;
+  height: 48px;
   -webkit-transition: 0.9s;
   -moz-transition: 0.9s;
   -o-transition: 0.9s;
