@@ -348,7 +348,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-28T18:50:49+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-28T18:54:39+08:00">
               2016-11-28
             </time>
             
@@ -422,21 +422,18 @@
 </blockquote>
 <h1 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h1><p>&#x5F53;Spring Cloud&#x7248;&#x672C;&#x4E3A; <code>Brixton.RELEASE</code> &#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Attribute &apos;value&apos; in annotation [org.springframework.cloud.netflix.feign.FeignClient] must be declared as an @AliasFor [serviceId], not [name].</span><br></pre></td></tr></table></figure>
-<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em></p>
-<p>&#x5C06;Spring Cloud&#x7248;&#x672C;&#x6539;&#x4E3A; <code>Brixton.SR5</code> &#x6216; <code>Camden.RELEASE</code> &#xFF0C;&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#x3002;</p>
+<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em><br>&#x5C06;Spring Cloud&#x7248;&#x672C;&#x6539;&#x4E3A; <code>Brixton.SR5</code> &#x6216; <code>Camden.RELEASE</code> &#xFF0C;&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#x3002;</p>
 <h1 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h1><ul>
 <li>&#x5F53; Swagger1 &#x4E0E; Feign &#x96C6;&#x6210;&#x65F6;&#xFF0C;Spring Boot&#x542F;&#x52A8;&#xFF0C;&#x4F1A;&#x62A5;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#xFF1A;</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Caused by: java.lang.NullPointerException: null</span><br><span class="line">    at com.mangofactory.swagger.models.property.field.FieldModelPropertyProvider.propertiesForDeserialization(FieldModelPropertyProvider.java:75) ~[swagger-models-1.0.2.jar:1.0.2]</span><br><span class="line">    at com.mangofactory.swagger.models.property.provider.DefaultModelPropertiesProvider.propertiesForDeserialization(DefaultModelPropertiesProvider.java:43) ~[swagger-models-1.0.2.jar:1.0.2]</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em></p>
-<p><img src="http://luoml.coding.me/2016/10/26/feign-swagger1/" alt="Feign&#x4E0E;Swagger1&#x96C6;&#x6210;&#x6CE8;&#x5165;&#x5931;&#x8D25;&#x95EE;&#x9898;">&#xFF0C;&#x589E;&#x52A0; <code>springSwaggerConfig.jacksonSwaggerSupport();</code> &#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em><br><a href="http://luoml.coding.me/2016/10/26/feign-swagger1/" target="_blank" rel="external">Feign&#x4E0E;Swagger1&#x96C6;&#x6210;&#x6CE8;&#x5165;&#x5931;&#x8D25;&#x95EE;&#x9898;</a>&#xFF0C;&#x589E;&#x52A0; <code>springSwaggerConfig.jacksonSwaggerSupport();</code> &#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">    public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {</span><br><span class="line">        springSwaggerConfig.jacksonSwaggerSupport();</span><br><span class="line">        this.springSwaggerConfig = springSwaggerConfig;</span><br><span class="line">    }</span><br></pre></td></tr></table></figure>
 <ul>
 <li>&#x5F53;&#x4F7F;&#x7528; Swagger <code>2.6.0</code> &#x65F6;&#xFF0C;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5230; Eureka Server &#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x670D;&#x52A1;&#x540D;&#x4E3A; <code>UNKNOW</code> &#x7684;&#x60C5;&#x51B5;&#x3002;</li>
 </ul>
-<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em></p>
-<p>&#x66F4;&#x6362; Swagger2 &#x7684;&#x7248;&#x672C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A; <code>2.5.0</code> </p>
-<h1 id="Spring-Data-Rest"><a href="#Spring-Data-Rest" class="headerlink" title="Spring Data Rest"></a>Spring Data Rest</h1><p>Spring Data Rest &#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x4E3B;&#x952E; ID &#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E3B;&#x952E; ID &#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A; <img src="http://luoml.coding.me/2016/08/29/spring-data-rest-id/" alt="Spring Data Rest&#x8FD4;&#x56DE;&#x4E3B;&#x952E;ID"></p>
+<p><em>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</em><br>&#x66F4;&#x6362; Swagger2 &#x7684;&#x7248;&#x672C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A; <code>2.5.0</code> </p>
+<h1 id="Spring-Data-Rest"><a href="#Spring-Data-Rest" class="headerlink" title="Spring Data Rest"></a>Spring Data Rest</h1><p>Spring Data Rest &#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x4E3B;&#x952E; ID &#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E3B;&#x952E; ID &#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A; <a href="http://luoml.coding.me/2016/08/29/spring-data-rest-id/" target="_blank" rel="external">Spring Data Rest&#x8FD4;&#x56DE;&#x4E3B;&#x952E;ID</a></p>
 
           
         
